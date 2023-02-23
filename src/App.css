@@ -1,0 +1,80 @@
+h1 {
+    font-size: 2rem;
+    color: aliceblue;
+}
+
+h2 {
+    color: #646d90;
+    font-size: 1.5rem;
+}
+
+h3 {
+    color: aliceblue;
+    font-size: 1.6rem;
+}
+
+h4 {
+    color: aliceblue;
+    font-size: 0.6rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "leaderboard division"
+        "leaderboard blinds"
+        "leaderboard timer"
+        "leaderboard none";
+    grid-column-gap: 5vw;
+    grid-row-gap: 5vh;
+    /* background-color: #2196f3; */
+    padding: 0 3vw 0 3vw;
+    justify-content: center;
+    margin-top: 7vh;
+}
+
+.leaderboard,
+.header {
+    grid-area: leaderboard;
+    /* background-color: black; */
+}
+
+.header {
+    margin-top: 7vh;
+}
+
+.division,
+.blinds,
+.timer {
+    grid-area: division;
+    display: "flex";
+    align-items: center;
+    justify-content: center;
+}
+
+.blinds {
+    grid-area: blinds;
+}
+
+.timer {
+    grid-area: timer;
+}
+
+.cardContainer {
+    background: #101c43;
+    border-radius: 9.96378px;
+    display: flex;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    align-items: center;
+    justify-content: left;
+
+    padding: 1vh 3vw 1vh 1vw;
+    /* max-width: 20vw; */
+}
+
+.cardElement {
+    padding: 0 0vw 0 2vw;
+}
