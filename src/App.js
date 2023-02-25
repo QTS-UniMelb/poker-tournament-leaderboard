@@ -3,6 +3,7 @@ import React from "react";
 import config from "./config/config.json";
 
 import { LeaderBoardPage } from "./Pages/LeaderBoardPage";
+import { SponsorPostPage } from "./Pages/SponsorPostPage";
 
 function App() {
     if (localStorage.getItem("deadline") === null) {
@@ -21,15 +22,15 @@ function App() {
         parseInt(localStorage.getItem("blindLevel"))
     );
 
+    const [displaySponsor, setDisplaySponsor] = React.useState(false);
+    const [sponsor, setSponsor] = React.useState(0);
+
     const handleReset = () => {
         const isObject = function (a) {
-            console.log(a);
-            console.log(!!a && a.constructor === Object);
             return !!a && a.constructor === Object;
         };
 
         const getBlinds = () => {
-            console.log(blindLevel);
             return isObject(config.blinds[blindLevel]) &&
                 config.blinds[blindLevel].duration
                 ? config.blinds[blindLevel].duration
@@ -37,13 +38,12 @@ function App() {
         };
 
         const blindDuration = getBlinds();
-        const newDeadline = Date.now() + blindDuration  * 1000;
+        const newDeadline = Date.now() + blindDuration * 60 * 1000;
         localStorage.setItem("deadline", newDeadline);
         setDeadline(newDeadline);
     };
 
     const handleRaiseBlinds = () => {
-        console.log("hello");
         if (blindLevel + 1 >= config.blinds.length) {
             setBlindLevel(0);
             localStorage.setItem("blindLevel", 0);
@@ -53,14 +53,40 @@ function App() {
         }
     };
 
+    const handleShowSponsor = () => {
+        if (!config.sponsor_posts) return;
+        if (config.sponsor_posts.length < 1) return;
+
+        setDisplaySponsor(true);
+    };
+
+    const handlehideSponsor = () => {
+        setDisplaySponsor(false);
+
+        if (sponsor + 1 >= config.sponsor_posts.length) {
+            setSponsor(0);
+        } else {
+            setSponsor(sponsor + 1);
+        }
+    };
+
     return (
         <div className="App">
-            <LeaderBoardPage
-                deadline={deadline}
-                handleReset={handleReset}
-                handleRaiseBlinds={handleRaiseBlinds}
-                blinds={config.blinds[blindLevel].amount}
-            />
+            {displaySponsor ? (
+                <SponsorPostPage
+                    image={config.sponsor_posts[sponsor]}
+                    handlehideSponsor={handlehideSponsor}
+                    time={config.sponsor_post_time * 1000}
+                />
+            ) : (
+                <LeaderBoardPage
+                    deadline={deadline}
+                    handleReset={handleReset}
+                    handleRaiseBlinds={handleRaiseBlinds}
+                    blinds={config.blinds[blindLevel].amount}
+                    handleShowSponsor={handleShowSponsor}
+                />
+            )}
         </div>
     );
 }

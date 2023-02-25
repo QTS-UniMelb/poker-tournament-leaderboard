@@ -12,14 +12,18 @@ export const LeaderBoardPage = ({
     handleReset,
     handleRaiseBlinds,
     blinds,
+    handleShowSponsor,
 }) => {
     const [currentFile, setCurrentFile] = useState(0);
 
     const handleNextFile = () => {
         if (currentFile + 1 === config.leaderboards.length) {
             setCurrentFile(0);
+            handleShowSponsor();
+            console.log(0);
         } else {
             setCurrentFile(currentFile + 1);
+            console.log(currentFile + 1);
         }
     };
 

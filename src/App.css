@@ -78,3 +78,14 @@ h4 {
 .cardElement {
     padding: 0 0vw 0 2vw;
 }
+
+.sponsorPage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.sponsorPostImage {
+    height: 80%;
+}
