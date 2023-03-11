@@ -4,6 +4,9 @@ import config from "./config/config.json";
 
 import { LeaderBoardPage } from "./Pages/LeaderBoardPage";
 import { SponsorPostPage } from "./Pages/SponsorPostPage";
+import { FullScreen, useFullScreenHandle } from "react-full-screen";
+
+import FullscreenIcon from "@mui/icons-material/Fullscreen";
 
 function App() {
     if (localStorage.getItem("deadline") === null) {
@@ -24,6 +27,8 @@ function App() {
 
     const [displaySponsor, setDisplaySponsor] = React.useState(false);
     const [sponsor, setSponsor] = React.useState(0);
+    const [timerOn, setTimerOn] = React.useState(true);
+    const handle = useFullScreenHandle();
 
     const handleReset = () => {
         const isObject = function (a) {
@@ -44,6 +49,7 @@ function App() {
     };
 
     const handleRaiseBlinds = () => {
+        playSound();
         if (blindLevel + 1 >= config.blinds.length) {
             setBlindLevel(0);
             localStorage.setItem("blindLevel", 0);
@@ -70,23 +76,70 @@ function App() {
         }
     };
 
+    const handleChangeTimerOn = () => {
+        if (timerOn) {
+            localStorage.setItem("storedTime", deadline - Date.now());
+            setTimerOn(false);
+        } else {
+            setDeadline(
+                Date.now() + parseInt(localStorage.getItem("storedTime"))
+            );
+            setTimerOn(true);
+        }
+    };
+
+    const handleKeyDown = (event) => {
+        if (event.key === "ArrowDown") {
+            const newDeadline = deadline - 60 * 1000;
+            localStorage.setItem("deadline", newDeadline);
+            setDeadline(newDeadline);
+        }
+        if (event.key === "ArrowUp") {
+            const newDeadline = deadline + 60 * 1000;
+            localStorage.setItem("deadline", newDeadline);
+            setDeadline(newDeadline);
+        }
+    };
+
+    React.useEffect(() => {
+        window.addEventListener("keydown", handleKeyDown);
+        return () => {
+            window.removeEventListener("keydown", handleKeyDown);
+        };
+    }, [deadline]);
+
+    const playSound = () => {
+        if (!config.sound_on) return;
+        new Audio(config.sound_file).play();
+    };
+
     return (
-        <div className="App">
-            {displaySponsor ? (
-                <SponsorPostPage
-                    image={config.sponsor_posts[sponsor]}
-                    handlehideSponsor={handlehideSponsor}
-                    time={config.sponsor_post_time * 1000}
-                />
-            ) : (
-                <LeaderBoardPage
-                    deadline={deadline}
-                    handleReset={handleReset}
-                    handleRaiseBlinds={handleRaiseBlinds}
-                    blinds={config.blinds[blindLevel].amount}
-                    handleShowSponsor={handleShowSponsor}
-                />
-            )}
+        <div className="App" onKeyDown={handleKeyDown}>
+            <FullscreenIcon
+                onClick={handle.enter}
+                className="fullScreenIcon"
+                fontSize="large"
+            />
+            <FullScreen handle={handle}>
+                {displaySponsor ? (
+                    <SponsorPostPage
+                        image={config.sponsor_posts[sponsor]}
+                        handlehideSponsor={handlehideSponsor}
+                        time={config.sponsor_post_time * 1000}
+                    />
+                ) : (
+                    <LeaderBoardPage
+                        deadline={deadline}
+                        handleReset={handleReset}
+                        handleRaiseBlinds={handleRaiseBlinds}
+                        blinds={config.blinds[blindLevel].amount}
+                        handleShowSponsor={handleShowSponsor}
+                        timerOn={+timerOn}
+                        handleChangeTimerOn={handleChangeTimerOn}
+                    />
+                )}
+                {/* <Player url={config.sound_file} /> */}
+            </FullScreen>
         </div>
     );
 }

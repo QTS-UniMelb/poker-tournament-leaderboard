@@ -8,6 +8,18 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import readXlsxFile from "read-excel-file";
 
+import { motion } from "framer-motion";
+
+const container = {
+    hidden: { x: "-100vw" },
+    show: {
+        x: 0,
+        transition: {
+            staggerChildren: 1,
+        },
+    },
+};
+
 export const Leaderboard = ({
     filename,
     participants_per_page,
@@ -65,9 +77,16 @@ export const Leaderboard = ({
             {!loading && (
                 <TableContainer
                     component={Paper}
-                    style={{ maxHeight: "75vh", maxWidth: "80vw" }}
+                    style={{
+                        maxHeight: "75vh",
+                        maxWidth: "60vw",
+                        minWidth: "60vw",
+                    }}
                 >
-                    <Table aria-label="simple table">
+                    <Table
+                        aria-label="simple table"
+                        sx={{ backgroundColor: "#101C43" }}
+                    >
                         <TableHead>
                             <TableRow
                                 sx={{
@@ -77,7 +96,10 @@ export const Leaderboard = ({
                                 {table.header.map((value, index) => (
                                     <TableCell
                                         key={`header-${index}`}
-                                        sx={{ color: "#F8FEFF" }}
+                                        sx={{
+                                            color: "#F8FEFF",
+                                            fontSize: "1.1rem",
+                                        }}
                                     >
                                         {value}
                                     </TableCell>
@@ -99,9 +121,27 @@ export const Leaderboard = ({
                                                 {
                                                     border: 0,
                                                 },
-                                            backgroundColor: "#101C43",
+                                            backgroundColor: "#040b24",
                                             opacity:
                                                 row[0] <= 8 ? "90%" : "100%",
+                                        }}
+                                        component={motion.tr}
+                                        initial={{
+                                            opacity: 0,
+                                            translateY: "20%",
+                                        }}
+                                        animate={{ opacity: 1, translateY: 0 }}
+                                        transition={{
+                                            ease: "easeIn",
+                                            duration: 1,
+                                            delay: 0.2 * (rowNumber - 1),
+                                        }}
+                                        exit={{
+                                            x: "100vw",
+                                            transition: {
+                                                ease: "easeIn",
+                                                duration: 0.2,
+                                            },
                                         }}
                                     >
                                         {row.map((value, columnNumber) => (
@@ -111,6 +151,7 @@ export const Leaderboard = ({
                                                 scope="row"
                                                 sx={{
                                                     color: "#F8FEFF",
+                                                    fontSize: "1.1rem",
                                                 }}
                                             >
                                                 {value}

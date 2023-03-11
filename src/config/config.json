@@ -1,19 +1,23 @@
 {
     "title": "QTS x CITADEL x IMC Poker Tournament",
     "subtitle": "Round 6",
+    "logo": "./logo2.png",
+    "circular_logo": true,
     "leaderboards": [
         { "file": "./leaderboard-beginner.xlsx", "division": "Beginner" },
         { "file": "./leaderboard-advanced.xlsx", "division": "Advanced" }
     ],
     "blinds": [
-        { "amount": "$100 / $200", "duration": 1 },
+        { "amount": "$100 / $200", "duration": 0.1 },
         { "amount": "$200 / $400", "duration": 1 },
         { "amount": "$400 / $800", "duration": 1 },
         { "amount": "$1600 / $3200", "duration": 10 },
         { "amount": "$3200 / $6400", "duration": 10 }
     ],
     "blind_duration": 20,
-    "participants_per_page": 10,
-    "sponsor_posts": ["./res/sponsor-posts/imc-instagram-post.png"],
-    "sponsor_post_time": 10
+    "participants_per_page": 11,
+    "sponsor_post": ["./res/sponsor-posts/imc-instagram-post.png"],
+    "sponsor_post_time": 10,
+    "sound_on": false,
+    "sound_file": "./res/sound/audio.mp3"
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
+import { motion } from "framer-motion";
 
 export const Division = ({ division }) => {
     return (
@@ -18,7 +19,18 @@ export const Division = ({ division }) => {
 
             <div className="cardElement">
                 <h4 style={{ margin: 0, padding: 0 }}>Division</h4>
-                <h3 style={{ margin: 0, padding: 0 }}>{division}</h3>
+                <motion.h3
+                    style={{ margin: 0, padding: 0 }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{
+                        ease: "easeIn",
+                        duration: 1,
+                    }}
+                    key={division}
+                >
+                    {division}
+                </motion.h3>
             </div>
         </div>
     );

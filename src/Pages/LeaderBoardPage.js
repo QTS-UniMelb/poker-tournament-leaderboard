@@ -13,6 +13,8 @@ export const LeaderBoardPage = ({
     handleRaiseBlinds,
     blinds,
     handleShowSponsor,
+    timerOn,
+    handleChangeTimerOn,
 }) => {
     const [currentFile, setCurrentFile] = useState(0);
 
@@ -20,19 +22,20 @@ export const LeaderBoardPage = ({
         if (currentFile + 1 === config.leaderboards.length) {
             setCurrentFile(0);
             handleShowSponsor();
-            console.log(0);
         } else {
             setCurrentFile(currentFile + 1);
-            console.log(currentFile + 1);
         }
     };
 
     return (
         <div>
             <div className="header">
-                <Header />
+                <Header
+                    logo={config.logo}
+                    circularLogo={config.circular_logo ? 1 : undefined}
+                />
             </div>
-            <div className="grid-container">
+            <div className="gridContainer">
                 <div className="leaderboard">
                     <Leaderboard
                         filename={config.leaderboards[currentFile].file}
@@ -56,6 +59,8 @@ export const LeaderBoardPage = ({
                         deadline={deadline}
                         handleReset={handleReset}
                         handleRaiseBlinds={handleRaiseBlinds}
+                        timerOn={timerOn}
+                        handleChangeTimerOn={handleChangeTimerOn}
                     />
                 </div>
             </div>

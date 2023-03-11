@@ -1,4 +1,5 @@
 import React from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 export const SponsorPostPage = ({ image, handlehideSponsor, time }) => {
     React.useEffect(() => {
@@ -7,8 +8,22 @@ export const SponsorPostPage = ({ image, handlehideSponsor, time }) => {
     }, []);
 
     return (
-        <div className="sponsorPage">
-            <img src={image} className="sponsorPostImage" />
-        </div>
+        <AnimatePresence>
+            <motion.div
+                className="sponsorPage"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ ease: "easeIn", duration: 1 }}
+                exit={{
+                    opacity: 0,
+                    transition: {
+                        ease: "easeIn",
+                        duration: 1,
+                    },
+                }}
+            >
+                <img src={image} className="sponsorPostImage" />
+            </motion.div>
+        </AnimatePresence>
     );
 };

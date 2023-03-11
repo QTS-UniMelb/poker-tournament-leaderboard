@@ -1,5 +1,6 @@
 import React from "react";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
+import { motion } from "framer-motion";
 
 export const Blinds = ({ blinds, handleRaiseBlinds }) => {
     return (
@@ -18,7 +19,18 @@ export const Blinds = ({ blinds, handleRaiseBlinds }) => {
 
             <div className="cardElement">
                 <h4 style={{ margin: 0, padding: 0 }}>Blinds</h4>
-                <h3 style={{ margin: 0, padding: 0 }}>{blinds}</h3>
+                <motion.h3
+                    style={{ margin: 0, padding: 0 }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{
+                        ease: "easeIn",
+                        duration: 1,
+                    }}
+                    key={blinds}
+                >
+                    {blinds}
+                </motion.h3>
             </div>
         </div>
     );

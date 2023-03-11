@@ -6,11 +6,19 @@ import { useEffect, useState } from "react";
 const SECOND = 1000;
 const MINUTE = SECOND * 60;
 
-export const Timer = ({ deadline, handleReset, handleRaiseBlinds }) => {
+export const Timer = ({
+    deadline,
+    handleReset,
+    handleRaiseBlinds,
+    timerOn,
+    handleChangeTimerOn,
+}) => {
     const [time, setTime] = useState(deadline - Date.now());
 
     useEffect(() => {
-        const handleTimerUpdate = () => {
+        const handleTimerUpdate = (timer) => {
+            if (!timer) return;
+
             const newDeadline = deadline - Date.now();
 
             if (newDeadline < 0) {
@@ -20,9 +28,11 @@ export const Timer = ({ deadline, handleReset, handleRaiseBlinds }) => {
                 setTime(newDeadline);
             }
         };
-        const interval = setInterval(handleTimerUpdate, 1000);
+        const interval = setInterval(() => {
+            handleTimerUpdate(timerOn);
+        }, 1000);
         return () => clearInterval(interval);
-    }, [deadline]);
+    }, [deadline, timerOn]);
 
     return (
         <div className="cardContainer">
@@ -39,7 +49,7 @@ export const Timer = ({ deadline, handleReset, handleRaiseBlinds }) => {
                 />
             </div>
 
-            <div className="cardElement">
+            <div className="cardElement" onClick={handleChangeTimerOn}>
                 <h4 style={{ margin: 0, padding: 0 }}>Remaining Time</h4>
                 <h3 style={{ margin: 0, padding: 0 }}>
                     {Math.floor(time / MINUTE) % 60}:
