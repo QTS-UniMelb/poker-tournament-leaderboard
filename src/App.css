@@ -30,6 +30,12 @@ body :fullscreen,
         url(../public/res/fonts/grisly/grisly.ttf) format("truetype");
 }
 
+@font-face {
+    font-family: "varela";
+    src: local("varela"),
+        url(../public/res/fonts/varela/varela.ttf) format("truetype");
+}
+
 h1 {
     font-size: 2.3rem;
     color: aliceblue;

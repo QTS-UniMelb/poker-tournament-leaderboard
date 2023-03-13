@@ -89,6 +89,7 @@ export const Leaderboard = ({
                                         sx={{
                                             color: "#F8FEFF",
                                             fontSize: "1.1rem",
+                                            fontFamily: "varela, sans-serif",
                                         }}
                                     >
                                         {value}
@@ -142,6 +143,8 @@ export const Leaderboard = ({
                                                 sx={{
                                                     color: "#F8FEFF",
                                                     fontSize: "1.1rem",
+                                                    fontFamily:
+                                                        "varela, sans-serif",
                                                 }}
                                             >
                                                 {value}
