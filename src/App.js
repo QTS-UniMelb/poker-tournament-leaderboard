@@ -106,6 +106,7 @@ function App() {
         return () => {
             window.removeEventListener("keydown", handleKeyDown);
         };
+        // eslint-disable-next-line
     }, [deadline]);
 
     const playSound = () => {
@@ -138,7 +139,6 @@ function App() {
                         handleChangeTimerOn={handleChangeTimerOn}
                     />
                 )}
-                {/* <Player url={config.sound_file} /> */}
             </FullScreen>
         </div>
     );

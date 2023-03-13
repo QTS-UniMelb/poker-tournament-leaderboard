@@ -3,6 +3,7 @@ import { Blinds } from "../Components/Blinds";
 import { Division } from "../Components/Division";
 import { Header } from "../Components/Header";
 import { Leaderboard } from "../Components/Leaderboard";
+import { SponsorLogos } from "../Components/SponsorLogos";
 import { Timer } from "../Components/Timer";
 
 import config from "../config/config.json";
@@ -53,6 +54,9 @@ export const LeaderBoardPage = ({
                         handleRaiseBlinds={handleRaiseBlinds}
                         blinds={blinds}
                     />
+                </div>
+                <div className="sponsorLogos">
+                    <SponsorLogos sponsorLogos={config.sponsor_logos} />
                 </div>
                 <div className="timer">
                     <Timer

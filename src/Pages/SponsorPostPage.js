@@ -5,6 +5,8 @@ export const SponsorPostPage = ({ image, handlehideSponsor, time }) => {
     React.useEffect(() => {
         const interval = setInterval(handlehideSponsor, time);
         return () => clearInterval(interval);
+
+        // eslint-disable-next-line
     }, []);
 
     return (
@@ -22,7 +24,11 @@ export const SponsorPostPage = ({ image, handlehideSponsor, time }) => {
                     },
                 }}
             >
-                <img src={image} className="sponsorPostImage" />
+                <img
+                    src={image}
+                    className="sponsorPostImage"
+                    alt="sponsorImage"
+                />
             </motion.div>
         </AnimatePresence>
     );

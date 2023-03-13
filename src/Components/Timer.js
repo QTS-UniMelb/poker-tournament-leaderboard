@@ -32,6 +32,8 @@ export const Timer = ({
             handleTimerUpdate(timerOn);
         }, 1000);
         return () => clearInterval(interval);
+        
+        // eslint-disable-next-line
     }, [deadline, timerOn]);
 
     return (

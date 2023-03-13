@@ -2,8 +2,8 @@ html,
 body {
     width: 100%;
     height: 100%;
-    background-color: #05103a;
-    background-image: url("../public/res/background-2.png");
+    /* background-color: #05103a; */
+    background-image: url("../public/res/background-4.png");
     background-size: cover;
     background-position: 0;
     background-repeat: repeat;
@@ -13,29 +13,46 @@ body {
 html,
 body :fullscreen,
 ::backdrop {
-    background-color: #05103a;
-    background-image: url("../public/res/background-2.png");
+    /* background-color: #05103a; */
+    background-image: url("../public/res/background-4.png");
     background-size: cover;
 }
 
+@font-face {
+    font-family: "Cramps";
+    src: local("Cramps"),
+        url(../public/res/fonts/cramps/Cramps.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "grisly";
+    src: local("grisly"),
+        url(../public/res/fonts/grisly/grisly.ttf) format("truetype");
+}
+
 h1 {
-    font-size: 2rem;
+    font-size: 2.3rem;
     color: aliceblue;
+    font-family: "Cramps", sans-serif;
 }
 
 h2 {
     color: #646d90;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    font-family: "grisly", sans-serif;
 }
 
 h3 {
     color: aliceblue;
     font-size: 1.6rem;
+    font-family: "grisly", sans-serif;
 }
 
 h4 {
     color: aliceblue;
     font-size: 0.6rem;
+    line-height: 1.2rem;
+    font-family: "Cramps", sans-serif;
 }
 
 .gridContainer {
@@ -44,7 +61,9 @@ h4 {
         "leaderboard division"
         "leaderboard blinds"
         "leaderboard timer"
+        "leaderboard sponsor-logos"
         "leaderboard none";
+
     grid-column-gap: 5vw;
     grid-row-gap: 5vh;
     /* background-color: #2196f3; */
@@ -67,7 +86,8 @@ h4 {
 
 .division,
 .blinds,
-.timer {
+.timer,
+.sponsorLogos {
     grid-area: division;
     display: "flex";
     align-items: center;
@@ -80,6 +100,21 @@ h4 {
 
 .timer {
     grid-area: timer;
+}
+
+.sponsorLogos {
+    grid-area: sponsor-logos;
+}
+
+.sponsorLogoImage {
+    width: 21vw;
+    text-align: center;
+}
+
+.sponsorLogoImage img {
+    width: 95%;
+    margin: 1vh 0 1vh 0;
+    opacity: 1;
 }
 
 .cardContainer {
@@ -119,8 +154,14 @@ h4 {
     left: 90vw;
     top: 0;
     z-index: 2;
-    color: orange;
+    color: darkorange;
     font-size: "large";
+    cursor: pointer;
+}
+
+.fullScreenIcon:hover {
+    color: orange;
+    transform: scale(1.2);
 }
 
 .logo {
@@ -130,7 +171,7 @@ h4 {
     height: 10vw;
     size: 100px;
     border: 1px solid #041128;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
-    background-color: #02112b;
+    box-shadow: -5px 10px 10px rgba(0, 62, 65, 0.7);
+    background-color: #010214;
     padding: 0.5rem;
 }

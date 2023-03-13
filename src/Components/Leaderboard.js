@@ -10,16 +10,6 @@ import readXlsxFile from "read-excel-file";
 
 import { motion } from "framer-motion";
 
-const container = {
-    hidden: { x: "-100vw" },
-    show: {
-        x: 0,
-        transition: {
-            staggerChildren: 1,
-        },
-    },
-};
-
 export const Leaderboard = ({
     filename,
     participants_per_page,
