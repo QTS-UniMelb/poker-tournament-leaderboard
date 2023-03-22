@@ -3,7 +3,7 @@ body {
     width: 100%;
     height: 100%;
     /* background-color: #05103a; */
-    background-image: url("../public/res/background-4.png");
+    background-image: url("../public/res/background/background-4.png");
     background-size: cover;
     background-position: 0;
     background-repeat: repeat;
@@ -14,7 +14,7 @@ html,
 body :fullscreen,
 ::backdrop {
     /* background-color: #05103a; */
-    background-image: url("../public/res/background-4.png");
+    background-image: url("../public/res/background/background-4.png");
     background-size: cover;
 }
 
