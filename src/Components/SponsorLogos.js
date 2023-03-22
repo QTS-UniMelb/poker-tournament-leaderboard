@@ -13,6 +13,7 @@ export const SponsorLogos = ({ sponsorLogos }) => {
                         width: "100%",
                         justifyContent: "center",
                     }}
+                    key={i}
                 >
                     <img src={image} alt={`sponsor-logo-${i}`} />
                 </div>

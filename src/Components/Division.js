@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export const Division = ({ division }) => {
     return (
         <div className="cardContainer">
-            <div div style={{ padding: "0 0vw 0 0vw", display: "block" }}>
+            <div style={{ padding: "0 0vw 0 0vw", display: "block" }}>
                 <EmojiEventsIcon
                     sx={{
                         color: "#4AD0EE",
