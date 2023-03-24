@@ -39,7 +39,7 @@ export const Leaderboard = ({
         const updateSection = () => {
             if (
                 (leaderBoardSection + 1) * participants_per_page >
-                table.rows.length
+                table.rows.length - 1
             ) {
                 setLeaderBoardSection(0);
                 handleNextFile();
@@ -90,6 +90,8 @@ export const Leaderboard = ({
                                             color: "#F8FEFF",
                                             fontSize: "1.1rem",
                                             fontFamily: "varela, sans-serif",
+                                            textAlign:
+                                                index < 2 ? "left" : "center",
                                         }}
                                     >
                                         {value}
@@ -145,6 +147,10 @@ export const Leaderboard = ({
                                                     fontSize: "1.1rem",
                                                     fontFamily:
                                                         "varela, sans-serif",
+                                                    textAlign:
+                                                        columnNumber < 2
+                                                            ? "left"
+                                                            : "center",
                                                 }}
                                             >
                                                 {value}

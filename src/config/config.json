@@ -1,32 +1,44 @@
 {
     "title": "QTS x CITADEL x IMC Poker Tournament",
-    "subtitle": "Round 6",
+    "subtitle": "Round 1",
     "logo": "./res/club-logos/logo2.png",
     "circular_logo": true,
     "leaderboards": [
         {
-            "file": "./res/leaderboards/leaderboard-beginner.xlsx",
+            "file": "./res/leaderboards/R1 Beginner.xlsx",
             "division": "Beginner"
         },
         {
-            "file": "./res/leaderboards/leaderboard-advanced.xlsx",
+            "file": "./res/leaderboards/R1 Intermediate.xlsx",
+            "division": "Intermediate"
+        },
+        {
+            "file": "./res/leaderboards/R1 Advanced.xlsx",
             "division": "Advanced"
         }
     ],
     "blinds": [
-        { "amount": "$100 / $200", "duration": 0.1 },
-        { "amount": "$200 / $400", "duration": 1 },
-        { "amount": "$400 / $800", "duration": 1 },
-        { "amount": "$1600 / $3200", "duration": 10 },
-        { "amount": "$3200 / $6400", "duration": 10 }
+        { "amount": "$100 / $200", "duration": 30 },
+        { "amount": "$200 / $400", "duration": 30 },
+        { "amount": "$400 / $800", "duration": 30 },
+        { "amount": "$1600 / $3200", "duration": 30 },
+        { "amount": "$3200 / $6400", "duration": 30 }
     ],
-    "blind_duration": 20,
+
+    "blind_duration": 30,
     "participants_per_page": 11,
     "sponsor_logos": [
         "./res/sponsor-logos/citadel_sec_logo-2.png",
         "./res/sponsor-logos/imc-logo.png"
     ],
-    "sponsor_posts": ["./res/sponsor-posts/imc-instagram-post.png"],
+    "sponsor_posts": [
+        "./res/sponsor-posts/imc-2.png",
+        "./res/sponsor-posts/citadel-1.png",
+        "./res/sponsor-posts/imc-3.png",
+        "./res/sponsor-posts/citadel-2.png",
+        "./res/sponsor-posts/imc-4.png",
+        "./res/sponsor-posts/citadel-3.png"
+    ],
     "sponsor_post_time": 10,
     "sound_on": true,
     "sound_file": "./res/sound/mixkit-airport-announcement-ding-1569.wav"
