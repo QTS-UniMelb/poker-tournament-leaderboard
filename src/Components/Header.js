@@ -10,7 +10,7 @@ export const Header = ({ logo, circularLogo }) => {
                 alt="logo"
             />
             <h1>QTS x CITADEL x IMC Poker Tournament</h1>
-            <h2>Round 6</h2>
+            <h2>Round 1</h2>
         </div>
     );
 };
