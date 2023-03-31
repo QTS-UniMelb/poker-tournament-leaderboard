@@ -34,11 +34,14 @@ export const LeaderBoardPage = ({
                 <Header
                     logo={config.logo}
                     circularLogo={config.circular_logo ? 1 : undefined}
+                    title={config.title}
+                    subtitle={config.subtitle}
                 />
             </div>
             <div className="gridContainer">
                 <div className="leaderboard">
                     <Leaderboard
+                        timePerPage={config.time_per_page}
                         filename={config.leaderboards[currentFile].file}
                         participants_per_page={config.participants_per_page}
                         handleNextFile={handleNextFile}

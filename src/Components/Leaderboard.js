@@ -11,6 +11,7 @@ import readXlsxFile from "read-excel-file";
 import { motion } from "framer-motion";
 
 export const Leaderboard = ({
+    timePerPage,
     filename,
     participants_per_page,
     handleNextFile,
@@ -50,7 +51,7 @@ export const Leaderboard = ({
 
         const interval = setInterval(() => {
             updateSection();
-        }, 5 * 1000);
+        }, timePerPage * 1000);
 
         return () => clearInterval(interval);
         // eslint-disable-next-line

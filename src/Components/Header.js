@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Header = ({ logo, circularLogo }) => {
+export const Header = ({ logo, circularLogo, title, subtitle }) => {
     return (
         <div style={{ textAlign: "center" }}>
             <img
@@ -9,8 +9,8 @@ export const Header = ({ logo, circularLogo }) => {
                 style={{ borderRadius: circularLogo ? "100vw" : 0 }}
                 alt="logo"
             />
-            <h1>QTS x CITADEL x IMC Poker Tournament</h1>
-            <h2>Round 1</h2>
+            <h1>{title}</h1>
+            <h2>{subtitle}</h2>
         </div>
     );
 };
