@@ -1,19 +1,19 @@
 {
     "title": "QTS x CITADEL x IMC Poker Tournament",
-    "subtitle": "Round 4",
+    "subtitle": "Round 5",
     "logo": "./res/club-logos/logo2.png",
     "circular_logo": true,
     "leaderboards": [
         {
-            "file": "./res/leaderboards/Round 4/Beginner.xlsx",
+            "file": "./res/leaderboards/Round 5/Beginner.xlsx",
             "division": "Beginner"
         },
         {
-            "file": "./res/leaderboards/Round 4/Intermediate.xlsx",
+            "file": "./res/leaderboards/Round 5/Intermediate.xlsx",
             "division": "Intermediate"
         },
         {
-            "file": "./res/leaderboards/Round 4/Advanced.xlsx",
+            "file": "./res/leaderboards/Round 5/Advanced.xlsx",
             "division": "Advanced"
         }
     ],
