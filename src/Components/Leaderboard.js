@@ -70,8 +70,9 @@ export const Leaderboard = ({
                     component={Paper}
                     style={{
                         maxHeight: "75vh",
-                        maxWidth: "60vw",
+                        maxWidth: "65vw",
                         minWidth: "60vw",
+                        overflow: "hidden",
                     }}
                 >
                     <Table
