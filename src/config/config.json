@@ -20,15 +20,19 @@
     "participants_per_page": 11,
     "time_per_page": 10,
     "blinds": [
-        { "amount": "$100 / $200", "duration": 30 },
-        { "amount": "$200 / $400", "duration": 30 },
-        { "amount": "$500 / $1000", "duration": 30 },
-        { "amount": "$1000 / $2000", "duration": 30 },
-        { "amount": "$2000 / $4000", "duration": 30 }
+        { "amount": "$100 / $200", "duration": 20 },
+        { "amount": "$200 / $400", "duration": 20 },
+        { "amount": "$500 / $1000", "duration": 20 },
+        { "amount": "$1000 / $2000", "duration": 20 },
+        { "amount": "$2000 / $4000", "duration": 20 },
+        { "amount": "$4000 / $8000", "duration": 20 },
+        { "amount": "$8000 / $16000", "duration": 15 },
+        { "amount": "$16000 / $32000", "duration": 15 },
+        { "amount": "$32000 / $64000", "duration": 10 },
+        { "amount": "$64000 / $128000", "duration": 10 },
+        { "amount": "$128000 / $256000", "duration": 10 }
     ],
-
     "blind_duration": 30,
-
     "sponsor_logos": [
         "./res/sponsor-logos/citadel_sec_logo-2.png",
         "./res/sponsor-logos/imc-logo.png"
@@ -43,5 +47,6 @@
     ],
     "sponsor_post_time": 10,
     "sound_on": true,
-    "sound_file": "./res/sound/mixkit-airport-announcement-ding-1569.wav"
+    "sound_file": "./res/sound/mixkit-airport-announcement-ding-1569.wav",
+    "final_mode": true
 }

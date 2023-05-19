@@ -78,6 +78,20 @@ h4 {
     margin-top: 10vh;
 }
 
+.gridContainerFinal {
+    display: grid;
+    grid-template-areas:
+        "blinds"
+        "timer";
+    grid-column-gap: 5vw;
+    grid-row-gap: 5vh;
+    padding: 0 3vw 0 3vw;
+    justify-content: center;
+    margin-top: 25vh;
+    transform: scale(1.5);
+    justify-content: center;
+}
+
 .leaderboard,
 .header {
     grid-area: leaderboard;
@@ -123,6 +137,12 @@ h4 {
     opacity: 1;
 }
 
+.sponsorLogoImageFinal img {
+    width: 95%;
+    margin: 1vh 0 1vh 0;
+    opacity: 1;
+}
+
 .cardContainer {
     /* background: #101c43; */
     background: #040b24;
@@ -135,9 +155,9 @@ h4 {
     align-items: center;
     justify-content: left;
 
-    padding: 1vh 0vw 1vh 1vw;
-    width: 21vw;
-    /* max-width: 20vw; */
+    padding: 1vh 1vw 1vh 1vw;
+    min-width: 21vw;
+    max-width: 25vw;
 }
 
 .cardElement {

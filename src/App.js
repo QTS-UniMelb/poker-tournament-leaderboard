@@ -7,6 +7,7 @@ import { SponsorPostPage } from "./Pages/SponsorPostPage";
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
 
 import FullscreenIcon from "@mui/icons-material/Fullscreen";
+import { Final } from "./Pages/Final";
 
 function App() {
     if (localStorage.getItem("deadline") === null) {
@@ -122,7 +123,17 @@ function App() {
                 fontSize="large"
             />
             <FullScreen handle={handle}>
-                {displaySponsor ? (
+                {config.final_mode ? (
+                    <Final
+                        deadline={deadline}
+                        handleReset={handleReset}
+                        handleRaiseBlinds={handleRaiseBlinds}
+                        blinds={config.blinds[blindLevel].amount}
+                        handleShowSponsor={handleShowSponsor}
+                        timerOn={+timerOn}
+                        handleChangeTimerOn={handleChangeTimerOn}
+                    />
+                ) : displaySponsor ? (
                     <SponsorPostPage
                         image={config.sponsor_posts[sponsor]}
                         handlehideSponsor={handlehideSponsor}
