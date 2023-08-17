@@ -14,7 +14,10 @@ function App() {
         localStorage.setItem("deadline", Date.now() + 30 * 60 * 1000);
     }
 
-    if (localStorage.getItem("blindLevel") === null) {
+    if (
+        localStorage.getItem("blindLevel") === null ||
+        localStorage.getItem("blindLevel") >= config.blinds.length
+    ) {
         localStorage.setItem("blindLevel", 0);
     }
 
