@@ -16,10 +16,10 @@
     "participants_per_page": 11,
     "time_per_page": 10,
     "blinds": [
-        { "amount": "$100 / $200", "duration": 20 },
-        { "amount": "$200 / $400", "duration": 20 },
-        { "amount": "$500 / $1000", "duration": 20 },
-        { "amount": "$1000 / $2000", "duration": 20 }
+        { "amount": "$100 / $200", "duration": 30 },
+        { "amount": "$200 / $400", "duration": 30 },
+        { "amount": "$500 / $1000", "duration": 30 },
+        { "amount": "$1000 / $2000", "duration": 30 }
     ],
     "blind_duration": 30,
     "sponsor_logos": ["./res/sponsor-logos/SIG.png"],
