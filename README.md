@@ -1,9 +1,10 @@
 # Poker Tournament Leaderboard Display
 
-## Almost all required changes can be made using the src/config/config.json file
+#### Almost all required changes can be made using the src/config/config.json file
 
 ### Config file structure
 
+```javascript
 {
 "title": "QTS x SIG UniMelb Poker Tournament", \\ displayed on top of leaderboard
 "subtitle": "Round 1", \\ Displayed under title
@@ -39,6 +40,6 @@
 "sound_file": "./res/sound/mixkit-airport-announcement-ding-1569.wav", \\ path to sound file
 "final_mode": false \\ if true, displays just the timer / blinds, and not the leaderboard
 }
+```
 
-
-### made for the UniMelb Quantitative Trading Society by Hamza Qureshi. 
+#### Made for the UniMelb Quantitative Trading Society by Hamza Qureshi. 
