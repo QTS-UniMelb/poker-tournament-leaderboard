@@ -42,4 +42,6 @@
 }
 ```
 
+##### Note: all files apecified here should be kept in the public folder
+
 #### Made for the UniMelb Quantitative Trading Society by Hamza Qureshi. 
