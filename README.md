@@ -4,7 +4,7 @@
 
 ### Config file structure
 
-```javascript
+```yaml
 {
 "title": "QTS x SIG UniMelb Poker Tournament", \\ displayed on top of leaderboard
 "subtitle": "Round 1", \\ Displayed under title
