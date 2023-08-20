@@ -1,5 +1,7 @@
 # Poker Tournament Leaderboard Display
 
+Currently hosted on netlify.com/
+
 #### Almost all required changes can be made using the src/config/config.json file
 
 ### Config file structure
