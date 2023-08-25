@@ -58,7 +58,7 @@ def find_total(df, rounds):
 
 if __name__ == "__main__":
     
-    file_path = "Poker Tournament S2Y23 - Leaderboard - Form responses 1.csv"
+    file_path = "src/helper_functions/Poker Tournament S2Y23 - Leaderboard - Form responses 1.csv"
     divisions = ["Beginner", "Advanced"]
     rounds_completed = 1
     assert(format(pd.read_csv(file_path, header=0), divisions, rounds_completed) == 0)

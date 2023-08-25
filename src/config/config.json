@@ -1,15 +1,15 @@
 {
     "title": "QTS x SIG UniMelb Poker Tournament",
-    "subtitle": "Round 1",
+    "subtitle": "Round 2",
     "logo": "./res/club-logos/logo2.png",
     "circular_logo": true,
     "leaderboards": [
         {
-            "file": "./res/leaderboards/Round 1/Beginner.xlsx",
+            "file": "./res/leaderboards/Round 2/Beginner.xlsx",
             "division": "Beginner"
         },
         {
-            "file": "./res/leaderboards/Round 1/Advanced.xlsx",
+            "file": "./res/leaderboards/Round 2/Advanced.xlsx",
             "division": "Advanced"
         }
     ],
