@@ -2,7 +2,7 @@
 
 Currently hosted on netlify.com/
 
-### How to Start Locally
+### How to Start Web App Locally
 
 * Download node from https://nodejs.org/en
 * Download or clone this Git Repo locally
@@ -11,9 +11,15 @@ Currently hosted on netlify.com/
 * Run ``` console npm start ```
 * The web app should run locally on port 3000 (or as specified)
 
-#### Almost all required changes can be made using the src/config/config.json file
+### How to update Leaderboard
+* The leaderboard files (in .xlsx) need to be put in the public/res/leaderboards/ directory.
+* To convert the leaderboard file we keep online to the right format, run src/helper_functions/format_leaderboard.py
+* This should produce one or more files (one for each division), that you can paste into the public/res/leaderboards/ directory.
+* Make sure to change the Round Number and/or any other info in the src/config/config.json file
 
 ### Config file structure
+
+Almost all required changes can be made using the src/config/config.json file
 
 ```yaml
 {
