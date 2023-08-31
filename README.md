@@ -14,11 +14,11 @@ Currently hosted on netlify.com/
 "circular_logo": true, \\ Makes the Club / Host logo circular
 "leaderboards": [
 {
-"file": "./res/leaderboards/Round 1/Beginner.xlsx",
+"file": "./res/leaderboards/Beginner.xlsx",
 "division": "Beginner"
 },
 {
-"file": "./res/leaderboards/Round 1/Advanced.xlsx",
+"file": "./res/leaderboards/Advanced.xlsx",
 "division": "Advanced"
 }
 ], \\ the leaderboard files in xlsx (important!) format. These can be generated using src/helper_functions/format_leaderboard.py

@@ -5,11 +5,11 @@
     "circular_logo": true,
     "leaderboards": [
         {
-            "file": "./res/leaderboards/Round 2/Beginner.xlsx",
+            "file": "./res/leaderboards/Beginner.xlsx",
             "division": "Beginner"
         },
         {
-            "file": "./res/leaderboards/Round 2/Advanced.xlsx",
+            "file": "./res/leaderboards/Advanced.xlsx",
             "division": "Advanced"
         }
     ],
