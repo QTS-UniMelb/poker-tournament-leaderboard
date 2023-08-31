@@ -2,6 +2,15 @@
 
 Currently hosted on netlify.com/
 
+### How to Start Locally
+
+* Download node from https://nodejs.org/en
+* Download or clone this Git Repo locally
+* Navigate to the repo folder in your Command Prompt / Terminal
+* Run ``` console npm install ```
+* Run ``` console npm start ```
+* The web app should run locally on port 3000 (or as specified)
+
 #### Almost all required changes can be made using the src/config/config.json file
 
 ### Config file structure
