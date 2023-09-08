@@ -60,5 +60,5 @@ if __name__ == "__main__":
     
     file_path = "src/helper_functions/Poker Tournament S2Y23 - Leaderboard - Form responses 1.csv"
     divisions = ["Beginner", "Advanced"]
-    rounds_completed = 2
+    rounds_completed = 3
     assert(format(pd.read_csv(file_path, header=0), divisions, rounds_completed) == 0)
