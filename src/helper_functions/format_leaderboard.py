@@ -14,6 +14,7 @@ def format(df, divisions, rounds):
     df needs to have columns ["Timestamp", "Full Name", "Which stream are you playing in today? ", 
     "Student_Number", "Email ", "Round 1", ..., "Round n", "Total"]
     """
+    df = df.dropna(subset=['Full Name'])
     
     for div in divisions:
         
@@ -60,5 +61,5 @@ if __name__ == "__main__":
     
     file_path = "src/helper_functions/Poker Tournament S2Y23 - Leaderboard - Form responses 1.csv"
     divisions = ["Beginner", "Advanced"]
-    rounds_completed = 3
+    rounds_completed = 4
     assert(format(pd.read_csv(file_path, header=0), divisions, rounds_completed) == 0)
