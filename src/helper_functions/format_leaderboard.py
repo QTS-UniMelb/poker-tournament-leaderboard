@@ -15,7 +15,7 @@ def format(df, divisions, rounds):
     "Student_Number", "Email ", "Round 1", ..., "Round n", "Total"]
     """
     df = df.dropna(subset=['Full Name'])
-    
+
     for div in divisions:
         
         curr_df = df.loc[df['Which stream are you playing in today? '] == div]
@@ -47,7 +47,7 @@ def find_total(df, rounds):
         
     if rounds > BEST_X_SCORES:
         for i in range(df.shape[0]):
-            scores = sorted(df.iloc[i, list(range(4, 4 + rounds))], reverse=True)
+            scores = sorted(df.iloc[i, list(range(FIRST_ROUND_COLUMN, FIRST_ROUND_COLUMN + rounds))], reverse=True)
             total = sum(scores[:BEST_X_SCORES])
             
             for j in range(BEST_X_SCORES, rounds):
@@ -61,5 +61,5 @@ if __name__ == "__main__":
     
     file_path = "src/helper_functions/Poker Tournament S2Y23 - Leaderboard - Form responses 1.csv"
     divisions = ["Beginner", "Advanced"]
-    rounds_completed = 4
+    rounds_completed = 5
     assert(format(pd.read_csv(file_path, header=0), divisions, rounds_completed) == 0)
