@@ -171,6 +171,15 @@ h4 {
     height: 100vh;
 }
 
+.sponsorPageItems {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    text-align: center;
+    height: 90%;
+}
+
 .sponsorPostImage {
     height: 80%;
 }

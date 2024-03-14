@@ -141,6 +141,7 @@ function App() {
                         image={config.sponsor_posts[sponsor]}
                         handlehideSponsor={handlehideSponsor}
                         time={config.sponsor_post_time * 1000}
+                        text={config.sponsor_post_text[sponsor]}
                     />
                 ) : (
                     <LeaderBoardPage

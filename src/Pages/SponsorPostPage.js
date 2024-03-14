@@ -1,7 +1,7 @@
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
-export const SponsorPostPage = ({ image, handlehideSponsor, time }) => {
+export const SponsorPostPage = ({ image, handlehideSponsor, time, text }) => {
     React.useEffect(() => {
         const interval = setInterval(handlehideSponsor, time);
         return () => clearInterval(interval);
@@ -24,11 +24,14 @@ export const SponsorPostPage = ({ image, handlehideSponsor, time }) => {
                     },
                 }}
             >
-                <img
-                    src={image}
-                    className="sponsorPostImage"
-                    alt="sponsorImage"
-                />
+                <div className="sponsorPageItems">
+                    <h1>{text}</h1>
+                    <img
+                        src={image}
+                        className="sponsorPostImage"
+                        alt="sponsorImage"
+                    />
+                </div>
             </motion.div>
         </AnimatePresence>
     );

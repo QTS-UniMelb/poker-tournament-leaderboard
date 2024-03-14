@@ -1,5 +1,5 @@
 {
-    "title": "QTS x SIG UniMelb Poker Tournament",
+    "title": "QTS x IMC UniMelb Poker Tournament",
     "subtitle": "Final Table",
     "logo": "./res/club-logos/logo2.png",
     "circular_logo": true,
@@ -29,11 +29,16 @@
          { "amount": "$128000 / $256000", "duration": 10 }
     ],
     "blind_duration": 30,
-    "sponsor_logos": ["./res/sponsor-logos/SIG.png"],
+    "sponsor_logos": ["./res/sponsor-logos/imc-logo.png"],
     "sponsor_posts": [
-        "./res/sponsor-posts/sig-1.png",
-        "./res/sponsor-posts/sig-2.png",
-        "./res/sponsor-posts/sig-3.png"
+        "./res/sponsor-posts/imc-1.jpg",
+        "./res/sponsor-posts/imc-2.jpg",
+        "./res/sponsor-posts/imc-3.jpg"
+    ],
+    "sponsor_post_text": [
+        "Event Sponsor",
+        "Upcoming Competition",
+        "Opportunities"
     ],
     "sponsor_post_time": 10,
     "sound_on": true,
