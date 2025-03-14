@@ -16,7 +16,7 @@
     "participants_per_page": 9,
     "time_per_page": 10,
     "blinds": [
-        { "amount": "$100 / $200", "duration": 20 },
+        { "amount": "$100 / $200", "duration": 10 },
          { "amount": "$200 / $400", "duration": 20 },
          { "amount": "$500 / $1000", "duration": 20 },
          { "amount": "$1000 / $2000", "duration": 20 },
