@@ -31,10 +31,12 @@
     "blind_duration": 20,
     "sponsor_logos": ["./res/sponsor-logos/SIG.png"],
     "sponsor_posts": [
+        "Event Sponsored by"
     ],
     "sponsor_post_text": [
+        "./res/sponsor-logos/SIG.png"
     ],
-    "sponsor_post_time": 10,
+    "sponsor_post_time": 5,
     "sound_on": true,
     "sound_file": "./res/sound/mixkit-airport-announcement-ding-1569.wav",
     "final_mode": false
