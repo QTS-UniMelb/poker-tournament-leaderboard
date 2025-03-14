@@ -31,10 +31,10 @@
     "blind_duration": 20,
     "sponsor_logos": ["./res/sponsor-logos/SIG.png"],
     "sponsor_posts": [
-        "./res/sponsor-logos/SIG.png",
+        "./res/sponsor-logos/SIG.png"
     ],
     "sponsor_post_text": [
-        "Event Sponsor",
+        "Event Sponsor"
     ],
     "sponsor_post_time": 10,
     "sound_on": true,
