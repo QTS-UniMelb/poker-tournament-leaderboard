@@ -36,29 +36,35 @@ body :fullscreen,
         url(../public/res/fonts/varela/varela.ttf) format("truetype");
 }
 
+@font-face {
+    font-family: "navitism";
+    src: local("navitism"),
+        url(../public/res/fonts/navitism/Navitism-Regular.otf) format("truetype");
+}
+
 h1 {
-    font-size: 2.3rem;
+    font-size: 2.7rem;
     color: aliceblue;
-    font-family: "Cramps", sans-serif;
+    font-family: "navitism", sans-serif;
 }
 
 h2 {
     color: #646d90;
-    font-size: 2rem;
-    font-family: "grisly", sans-serif;
+    font-size: 2.2rem;
+    font-family: "navitism", sans-serif;
 }
 
 h3 {
     color: aliceblue;
-    font-size: 1.6rem;
-    font-family: "grisly", sans-serif;
+    font-size: 1.7rem;
+    font-family: "navitism", sans-serif;
 }
 
 h4 {
     color: aliceblue;
-    font-size: 0.6rem;
-    line-height: 1.2rem;
-    font-family: "Cramps", sans-serif;
+    font-size: 1.0rem;
+    line-height: 1.9rem;
+    font-family: "navitism", sans-serif;
 }
 
 .gridContainer {
