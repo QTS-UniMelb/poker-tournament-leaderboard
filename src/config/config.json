@@ -16,7 +16,7 @@
     "participants_per_page": 9,
     "time_per_page": 5,
     "blinds": [
-        { "amount": "$100 / $200", "duration": 20 },
+        { "amount": "$100 / $200", "duration": 30 },
          { "amount": "$200 / $400", "duration": 20 },
          { "amount": "$500 / $1000", "duration": 20 },
          { "amount": "$1000 / $2000", "duration": 20 },
@@ -31,7 +31,7 @@
     "blind_duration": 20,
     "sponsor_logos": ["./res/sponsor-logos/SIG.png"],
     "sponsor_posts": [
-        "./res/sponsor-posts/SIG_resized.png"
+        "./res/sponsor-posts/SIG_resized_1450.png"
     ],
     "sponsor_post_text": [
         "Proudly Sponsored By"
