@@ -1,6 +1,6 @@
 {
     "title": "The UniMelb QTS x Susquehanna Poker Tournament",
-    "subtitle": "Round 1",
+    "subtitle": "Finals",
     "logo": "./res/club-logos/logo2.png",
     "circular_logo": true,
     "leaderboards": [
@@ -39,5 +39,5 @@
     "sponsor_post_time": 7,
     "sound_on": true,
     "sound_file": "./res/sound/mixkit-airport-announcement-ding-1569.wav",
-    "final_mode": false
+    "final_mode": true
 }
