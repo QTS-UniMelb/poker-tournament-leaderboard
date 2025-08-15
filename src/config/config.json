@@ -16,17 +16,17 @@
     "participants_per_page": 9,
     "time_per_page": 5,
     "blinds": [
-        { "amount": "$100 / $200", "duration": 20 },
+         { "amount": "$100 / $200", "duration": 20 },
          { "amount": "$200 / $400", "duration": 20 },
          { "amount": "$500 / $1000", "duration": 20 },
          { "amount": "$1000 / $2000", "duration": 20 },
          { "amount": "$2000 / $4000", "duration": 20 },
          { "amount": "$4000 / $8000", "duration": 20 },
-         { "amount": "$8000 / $16000", "duration": 15 },
-         { "amount": "$16000 / $32000", "duration": 15 },
-         { "amount": "$32000 / $64000", "duration": 10 },
-         { "amount": "$64000 / $128000", "duration": 10 },
-         { "amount": "$128000 / $256000", "duration": 10 }
+         { "amount": "$8000 / $16000", "duration": 20 },
+         { "amount": "$16000 / $32000", "duration": 20 },
+         { "amount": "$32000 / $64000", "duration": 15 },
+         { "amount": "$64000 / $128000", "duration": 15 },
+         { "amount": "$128000 / $256000", "duration": 15 }
     ],
     "blind_duration": 20,
     "sponsor_logos": ["./res/sponsor-logos/jane-street-horizontal-white.png"],
