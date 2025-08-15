@@ -2,6 +2,7 @@ import React from "react";
 import { Blinds } from "../Components/Blinds";
 import { Header } from "../Components/Header";
 import { Timer } from "../Components/Timer";
+import { SponsorLogos } from "../Components/SponsorLogos";
 
 import config from "../config/config.json";
 
@@ -40,9 +41,9 @@ export const Final = ({
                         handleChangeTimerOn={handleChangeTimerOn}
                     />
                 </div>
-                {/* <div className="sponsorLogos">
+                <div className="sponsorLogos">
                     <SponsorLogos sponsorLogos={config.sponsor_logos} />
-                </div> */}
+                </div>
             </div>
         </div>
     );

@@ -29,7 +29,7 @@
          { "amount": "$128000 / $256000", "duration": 10 }
     ],
     "blind_duration": 20,
-    "sponsor_logos": ["./res/sponsor-logos/jane-street-blue.png"],
+    "sponsor_logos": ["./res/sponsor-logos/jane-street-horizontal-white.png"],
     "sponsor_posts": [
         "./res/sponsor-posts/SIG_resized_1450.png"
     ],

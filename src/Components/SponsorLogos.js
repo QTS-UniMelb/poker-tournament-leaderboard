@@ -3,7 +3,7 @@ import React from "react";
 export const SponsorLogos = ({ sponsorLogos }) => {
     return (
         <div className="sponsorLogoImage">
-            <h3 style={{ color: "darkorange", fontSize: "1.3rem" }}>
+            <h3 style={{ color: "white", fontSize: "1.3rem" }}>
                 Sponsored By
             </h3>
             {sponsorLogos.map((image, i) => (
