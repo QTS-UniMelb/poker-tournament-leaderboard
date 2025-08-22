@@ -1,6 +1,6 @@
 {
     "title": "The UniMelb QTS x Jane Street Poker Tournament",
-    "subtitle": "Round 1",
+    "subtitle": "Round 2",
     "logo": "./res/club-logos/logo2.png",
     "circular_logo": true,
     "leaderboards": [
@@ -31,7 +31,7 @@
     "blind_duration": 20,
     "sponsor_logos": ["./res/sponsor-logos/jane-street-horizontal-white.png"],
     "sponsor_posts": [
-        "./res/sponsor-logos/jane-street-horizontal-white.png"
+        
     ],
     "sponsor_post_text": [
         "Proudly Sponsored By"
