@@ -31,7 +31,7 @@
     "blind_duration": 20,
     "sponsor_logos": ["./res/sponsor-logos/jane-street-horizontal-white.png"],
     "sponsor_posts": [
-        "./res/sponsor-posts/SIG_resized_1450.png"
+        "./res/sponsor-logos/jane-street-horizontal-white.png"
     ],
     "sponsor_post_text": [
         "Proudly Sponsored By"
