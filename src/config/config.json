@@ -1,6 +1,6 @@
 {
     "title": "The UniMelb QTS x Jane Street Poker Tournament",
-    "subtitle": "Round 4",
+    "subtitle": "Round 5",
     "logo": "./res/club-logos/logo2.png",
     "circular_logo": true,
     "leaderboards": [
@@ -18,7 +18,7 @@
     "blinds": [
          { "amount": "$100 / $200", "duration": 30 },
          { "amount": "$200 / $400", "duration": 30 },
-         { "amount": "$500 / $1000", "duration": 20 },
+         { "amount": "$500 / $1000", "duration": 30 },
          { "amount": "$1000 / $2000", "duration": 20 },
          { "amount": "$2000 / $4000", "duration": 20 },
          { "amount": "$4000 / $8000", "duration": 20 },
