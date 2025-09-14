@@ -18,7 +18,7 @@
     "blinds": [
          { "amount": "$100 / $200", "duration": 30 },
          { "amount": "$200 / $400", "duration": 30 },
-         { "amount": "$500 / $1000", "duration": 20 },
+         { "amount": "$500 / $1000", "duration": 30 },
          { "amount": "$1000 / $2000", "duration": 20 },
          { "amount": "$2000 / $4000", "duration": 20 },
          { "amount": "$4000 / $8000", "duration": 20 },
