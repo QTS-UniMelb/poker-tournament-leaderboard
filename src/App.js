@@ -8,7 +8,8 @@ import { Final } from "./Pages/Final";
 
 function App() {
     if (localStorage.getItem("deadline") === null) {
-        localStorage.setItem("deadline", Date.now() + 30 * 60 * 1000);
+        const initialDuration = config.blinds[0].duration;
+        localStorage.setItem("deadline", Date.now() + initialDuration * 60 * 1000);
     }
 
     if (
