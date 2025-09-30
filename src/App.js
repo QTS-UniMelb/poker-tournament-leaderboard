@@ -4,18 +4,11 @@ import config from "./config/config.json";
 
 import { LeaderBoardPage } from "./Pages/LeaderBoardPage";
 import { SponsorPostPage } from "./Pages/SponsorPostPage";
-import { FullScreen, useFullScreenHandle } from "react-full-screen";
-
-import FullscreenIcon from "@mui/icons-material/Fullscreen";
 import { Final } from "./Pages/Final";
 
 function App() {
     if (localStorage.getItem("deadline") === null) {
-        const initialDuration = config.blinds[0].duration; // Get duration of the first blind level
-        localStorage.setItem(
-            "deadline",
-            Date.now() + initialDuration * 60 * 1000
-        );
+        localStorage.setItem("deadline", Date.now() + 30 * 60 * 1000);
     }
 
     if (
@@ -36,7 +29,6 @@ function App() {
     const [displaySponsor, setDisplaySponsor] = React.useState(false);
     const [sponsor, setSponsor] = React.useState(0);
     const [timerOn, setTimerOn] = React.useState(true);
-    const handle = useFullScreenHandle();
 
     const handleReset = () => {
         const isObject = function (a) {
@@ -122,43 +114,43 @@ function App() {
         new Audio(config.sound_file).play();
     };
 
+    // Calculate next blinds - show "Tournament End" if at last level
+    const nextBlindIndex = (blindLevel + 1) % config.blinds.length;
+    const isLastBlindLevel = blindLevel === config.blinds.length - 1;
+    const nextBlindsAmount = isLastBlindLevel ? "Tournament End" : config.blinds[nextBlindIndex].amount;
+
     return (
         <div className="App" onKeyDown={handleKeyDown}>
-            <FullscreenIcon
-                onClick={handle.enter}
-                className="fullScreenIcon"
-                fontSize="large"
-            />
-            <FullScreen handle={handle}>
-                {config.final_mode ? (
-                    <Final
-                        deadline={deadline}
-                        handleReset={handleReset}
-                        handleRaiseBlinds={handleRaiseBlinds}
-                        blinds={config.blinds[blindLevel].amount}
-                        handleShowSponsor={handleShowSponsor}
-                        timerOn={+timerOn}
-                        handleChangeTimerOn={handleChangeTimerOn}
-                    />
-                ) : displaySponsor ? (
-                    <SponsorPostPage
-                        image={config.sponsor_posts[sponsor]}
-                        handlehideSponsor={handlehideSponsor}
-                        time={config.sponsor_post_time * 1000}
-                        text={config.sponsor_post_text[sponsor]}
-                    />
-                ) : (
-                    <LeaderBoardPage
-                        deadline={deadline}
-                        handleReset={handleReset}
-                        handleRaiseBlinds={handleRaiseBlinds}
-                        blinds={config.blinds[blindLevel].amount}
-                        handleShowSponsor={handleShowSponsor}
-                        timerOn={+timerOn}
-                        handleChangeTimerOn={handleChangeTimerOn}
-                    />
-                )}
-            </FullScreen>
+            {config.final_mode ? (
+                <Final
+                    deadline={deadline}
+                    handleReset={handleReset}
+                    handleRaiseBlinds={handleRaiseBlinds}
+                    blinds={config.blinds[blindLevel].amount}
+                    nextBlinds={nextBlindsAmount}
+                    handleShowSponsor={handleShowSponsor}
+                    timerOn={+timerOn}
+                    handleChangeTimerOn={handleChangeTimerOn}
+                />
+            ) : displaySponsor ? (
+                <SponsorPostPage
+                    image={config.sponsor_posts[sponsor]}
+                    handlehideSponsor={handlehideSponsor}
+                    time={config.sponsor_post_time * 1000}
+                    text={config.sponsor_post_text[sponsor]}
+                />
+            ) : (
+                <LeaderBoardPage
+                    deadline={deadline}
+                    handleReset={handleReset}
+                    handleRaiseBlinds={handleRaiseBlinds}
+                    blinds={config.blinds[blindLevel].amount}
+                    nextBlinds={nextBlindsAmount}
+                    handleShowSponsor={handleShowSponsor}
+                    timerOn={+timerOn}
+                    handleChangeTimerOn={handleChangeTimerOn}
+                />
+            )}
         </div>
     );
 }

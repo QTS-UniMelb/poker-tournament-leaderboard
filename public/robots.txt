@@ -1,3 +1,24 @@
-# https://www.robotstxt.org/robotstxt.html
-User-agent: *
-Disallow:
+Assumption that the number of customers per day are independent:
+-As evidenced by plot 1 (time series graph) there is a cyclical pattern where there is consistently a greater number of daily customers during the weekends compared to on weekdays. 
+-The shop being more popular on weekends than on weekdays suggests that Fatima's assumption about the independence of days is INCORRECT, and actually the number of customers per day is dependent on the specific day of the week. 
+
+Assumption of common variance between daily numbers in Weeks1&2 and Weeks3&4:
+-As evidenced by plot 2 (boxplots), the IQR and Range of Week1&2 is substantially lower than Week3&4.
+-This suggests that the variance of daily customers in week1&2 is lower, and therefore different, to the variance of daily customers in week3&4. 
+-Thus Fatima's assumption of common variance is questionable.
+
+Assumption of normal distribution during weeks1&2:
+-As evidenced by plot 3 (QQ plot), the data points generally follow the line of best fit.
+-Whilst the distribution is a bit skewed to the left, the assumption that the number of daily customers in weeks1&2 follows a normal distributions seems relatively reasonable. 
+
+Assumption of normal distribution during weeks3&4:
+-As evidenced by plot 4 (QQ plot), the data points do not fit the line of best fit very well. 
+-The data points indicate that the distribution is significantly skewed to the left, and the assumption that the number of daily customers in weeks3&4 follows a normal distribution is NOT reasonable.
+
+---
+
+First I will go over additional assumptions that I make to construct the confidence intervals above.
+- I use Welch's approximation to generate our CIs. 
+- This of course assumes that the samples between weeks1&2 and weeks3&4 are independent. This, I believe, is a reasonable assumption given our limited data judging by plot 1 (the time series plot) BECAUSE we separate the datapoints for weekdays and weekends in our analysis.
+- It also assumes that the underlying population distributions are normal. Constructing a QQ plot for each population distribution (plots 5-8), the data points are reasonably close to the line of best fit, and it is reasonable in this case to assume an underlying normal distribution. Of course, the largest limitation here is that there is a very little number of data points (especially for the weekends) to actually come to any conclusion, but as this is all the data we are given it is most logical and simple to assume that the underlying distribution is normal.
+

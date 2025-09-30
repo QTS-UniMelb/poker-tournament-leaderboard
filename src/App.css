@@ -113,12 +113,7 @@ h4 {
 .division,
 .blinds,
 .timer,
-.sponsorLogos {
-    grid-area: division;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+.sponsorLogos,
 
 .blinds {
     grid-area: blinds;

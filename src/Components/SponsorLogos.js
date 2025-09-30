@@ -1,23 +1,43 @@
-import React from "react";
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 export const SponsorLogos = ({ sponsorLogos }) => {
-    return (
-        <div className="sponsorLogoImage">
-            <h3 style={{ color: "white", fontSize: "1.3rem" }}>
-                Sponsored By
-            </h3>
+    if (!sponsorLogos || sponsorLogos.length === 0) {
+        return null;
+    }
+
+    const logoContent = (
+        <div style={{ 
+            position: 'fixed',
+            // 👇 CHANGE THIS VALUE 👇
+            bottom: '8vh', // Was 4vh. Increasing this moves it up.
+            // ---------------------
+            left: 0,
+            right: 0,
+            zIndex: 9999,
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            gap: '50px',
+        }}>
             {sponsorLogos.map((image, i) => (
-                <div
-                    style={{
-                        display: "flex",
-                        width: "100%",
-                        justifyContent: "center",
-                    }}
-                    key={i}
-                >
-                    <img src={image} alt={`sponsor-logo-${i}`} />
-                </div>
+                <img 
+                    key={i} 
+                    src={image} 
+                    alt={`sponsor-logo-${i}`} 
+                    style={{ 
+                        maxWidth: '220px',
+                        maxHeight: '75px',
+                        width: 'auto',
+                        height: 'auto'
+                    }} 
+                />
             ))}
         </div>
+    );
+
+    return ReactDOM.createPortal(
+        logoContent,
+        document.getElementById('logo-portal')
     );
 };

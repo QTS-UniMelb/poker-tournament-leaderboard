@@ -13,6 +13,7 @@ export const LeaderBoardPage = ({
     handleReset,
     handleRaiseBlinds,
     blinds,
+    nextBlinds,
     handleShowSponsor,
     timerOn,
     handleChangeTimerOn,
@@ -29,7 +30,7 @@ export const LeaderBoardPage = ({
     };
 
     return (
-        <div>
+        <div style={{ position: "relative", minHeight: "100vh" }}>
             <div className="header">
                 <Header
                     logo={config.logo}
@@ -56,6 +57,7 @@ export const LeaderBoardPage = ({
                     <Blinds
                         handleRaiseBlinds={handleRaiseBlinds}
                         blinds={blinds}
+                        nextBlinds={nextBlinds}
                     />
                 </div>
                 <div className="sponsorLogos">

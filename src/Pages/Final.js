@@ -1,8 +1,8 @@
 import React from "react";
 import { Blinds } from "../Components/Blinds";
 import { Header } from "../Components/Header";
-import { Timer } from "../Components/Timer";
 import { SponsorLogos } from "../Components/SponsorLogos";
+import { Timer } from "../Components/Timer";
 
 import config from "../config/config.json";
 
@@ -11,6 +11,7 @@ export const Final = ({
     handleReset,
     handleRaiseBlinds,
     blinds,
+    nextBlinds,
     timerOn,
     handleChangeTimerOn,
 }) => {
@@ -29,6 +30,7 @@ export const Final = ({
                     <Blinds
                         handleRaiseBlinds={handleRaiseBlinds}
                         blinds={blinds}
+                        nextBlinds={nextBlinds}
                     />
                 </div>
 

@@ -2,10 +2,10 @@ import React from "react";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import { motion } from "framer-motion";
 
-export const Blinds = ({ blinds, handleRaiseBlinds }) => {
+export const Blinds = ({ blinds, handleRaiseBlinds, nextBlinds }) => {
     return (
         <div className="cardContainer" onDoubleClick={handleRaiseBlinds}>
-            <div div style={{ padding: "0 0vw 0 0vw", display: "block" }}>
+            <div style={{ padding: "0 0vw 0 0vw", display: "block" }}>
                 <AttachMoneyIcon
                     sx={{
                         color: "#4AD0EE",
@@ -31,6 +31,18 @@ export const Blinds = ({ blinds, handleRaiseBlinds }) => {
                 >
                     {blinds}
                 </motion.h3>
+
+                {nextBlinds && (
+                    <h4
+                        style={{
+                            margin: "8px 0 0 0",
+                            padding: 0,
+                            opacity: 0.6,
+                        }}
+                    >
+                        Next: {nextBlinds}
+                    </h4>
+                )}
             </div>
         </div>
     );
