@@ -1,6 +1,6 @@
 {
-    "title": "QTS Poker Tournament",
-    "subtitle": "Sponsored by Jane Street",
+    "title": "QTS Semester 1 Poker Tournament",
+    "subtitle": "Sponsored by Susquehanna",
     "logo": "./res/club-logos/logo2.png",
     "circular_logo": true,
     "leaderboards": [
@@ -30,7 +30,7 @@
     ],
     "blind_duration": 20,
     "sponsor_logos": [ "/res/club-logos/QTS_Logo.svg",
-                       "./res/sponsor-logos/jane-street-horizontal-white.png"
+                       "./res/sponsor-logos/sig.png"
                      ],
     "sponsor_posts": [
         
