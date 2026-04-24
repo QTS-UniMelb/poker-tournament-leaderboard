@@ -13,7 +13,7 @@
             "division": "Advanced"
         }
     ],
-    "participants_per_page": 9,
+    "participants_per_page": 6,
     "time_per_page": 5,
     "blinds": [
          { "amount": "$100 / $200", "duration": 30 },
